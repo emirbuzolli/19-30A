@@ -1,0 +1,26 @@
+.container{
+    background: black;
+    display: block;
+    flex-direction: column-reverse;
+    justify-content: center;
+ 
+}
+.contain    order: Home;
+}
+.container div:nth-child(1){
+    order: Menu;
+}
+.container div:nth-child(2){
+    order: About;
+}
+.container div:nth-child(3){
+    order: Contact ;
+}
+ul lier div{
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    font-size: 35xp;
+    
+}
+.container div:nth-child(0){
