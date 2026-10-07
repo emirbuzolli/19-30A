@@ -1,8 +1,233 @@
-/*GENERAL*/
 
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth; 
 }
-body
+
+:root {
+    --primary-color: #dfb15b; 
+    --bg-dark: #121212;      
+    --bg-light: #1a1a1a;      
+    --text-white: #ffffff;
+    --text-gray: #b3b3b3;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    line-height: 1.6;
+}
+
+
+header {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../img/hero-bg.jpg') no-repeat center center/cover;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+header h1 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-style: italic;
+    color: var(--text-gray);
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-white);
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover, nav ul li.active a {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+
+.Main {
+    padding: 100px 20px;
+    text-align: center;
+    background: linear-gradient(rgba(26, 26, 26, 0.9), rgba(18, 18, 18, 0.9));
+}
+
+.Main h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--text-white);
+}
+
+.Main p {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #000;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #fff;
+    transform: scale(1.05);
+}
+
+
+.About {
+    padding: 80px 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.About h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.About p {
+    color: var(--text-gray);
+    font-size: 1.1rem;
+}
+
+
+.Menu {
+    padding: 80px 20px;
+    background-color: var(--bg-light);
+}
+
+.Menu h2 {
+    text-align: center;
+    font-size: 2.3rem;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.box {
+    background-color: var(--bg-dark);
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(223, 177, 91, 0.1);
+    border-color: var(--primary-color);
+}
+
+.box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.box h2 {
+    font-size: 1.5rem;
+    color: var(--text-white);
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.box p {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    margin-bottom: 15px;
+    flex-grow: 1; 
+}
+
+.box h4 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.box button {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.box button:hover {
+    background-color: var(--primary-color);
+    color: #000;
+}
+
+
+.contact {
+    background-color: var(--bg-dark);
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 2px solid #2a2a2a;
+    margin-top: 100px;
+    margin-bottom: 0px;
+}
+
+.contact h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.contact p {
+    margin: 8px 0;
+    color: var(--text-gray);
+    font-size: 1.1rem;
+}
+
